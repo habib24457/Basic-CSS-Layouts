@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .container{
+            width: 100vw;
+            height: 100vh;
+
+            font-size: 'Quicksand',sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 50px 1fr 1fr 100px;
+
+            gap:10px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .container div{
+            padding: 10px;
+            border: 1px solid #000000;
+        }
+
+        .header{
+            grid-column-start: 1; /*This row will start at the first grid and will end at the 4th grid*/
+            grid-column-end: 4;
+        }
+
+        .contentLarge{
+           grid-row-start: 2;
+           grid-row-end:span 2; 
+        }
+
+        .contentSmall{
+
+        }
+
+        .footer{
+            grid-column: 1/span 3; /*This is also similar to grid-column-start: 1 and end 3*/
+            grid-column: 1/span 3;
+            grid-column: 1/span 3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Header
+        </div>
+
+        <div class="contentLarge">Content 1a</div>
+        <div class="contentLarge">Contnet 1b</div>
+
+         <div class="contentSmall">Content 2</div>
+        <div class="contentSmall">Contnet 3</div>
+
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
