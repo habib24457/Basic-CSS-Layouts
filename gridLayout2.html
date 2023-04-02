@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout 2</title>
+
+    <style>
+        .container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+         /* grid-auto-rows:150px; Determines the row automatically */
+        grid-gap:10px;
+        grid-auto-rows:minmax(150px,auto);
+        /* grid-template-areas: 
+            "header header"
+            "sidebar content"
+            "sidebar content"
+        ; */
+        }
+
+        .grid-item{
+            background-color: aqua;
+            border:2px solid white;
+            /* height: 100vh;
+            width: auto; */
+        }
+
+        .grid-item-1{
+            /* grid-column-start:1 ;
+            grid-column-end: 4; */
+            grid-column: span 3;
+        }
+
+        .grid-item-2{
+            grid-row:span 2;
+        }
+
+        .grid-item-3{
+            grid-row: span 3;
+        }
+/* 
+        .grid-item-1{
+            grid-area: header;
+        }
+
+        .grid-item-2{
+            grid-area: sidebar;
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="grid-item grid-item-1">Item 1</div>
+       <div class="grid-item grid-item-2">Item 2</div>
+       <div class="grid-item grid-item-3">Item 3</div>
+       <div class="grid-item grid-item-4">Item 4</div>
+       <div class="grid-item grid-item-5">Item 5</div>
+       <div class="grid-item grid-item-6">Item 6</div>
+    </div>
+
+</body>
+</html>
